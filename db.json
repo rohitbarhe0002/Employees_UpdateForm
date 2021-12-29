@@ -1,6 +1,138 @@
 {
   "data": [
     {
+      "id": 4,
+      "employee_name": "Cedric Kelly",
+      "employee_salary": 433060,
+      "employee_age": 22,
+      "profile_image": "",
+      "phone": "7415864990",
+      "city": "bomba",
+      "email": "Sincere@april.biz",
+      "gender": "Female"
+    },
+    {
+      "id": 5,
+      "employee_name": "Airi Satou",
+      "employee_salary": 162700,
+      "employee_age": 33,
+      "profile_image": ""
+    },
+    {
+      "id": 6,
+      "employee_name": "Brielle Williamson",
+      "employee_salary": 372000,
+      "employee_age": 61,
+      "profile_image": "",
+      "gender": "male",
+      "city": "devas",
+      "email": "jkj",
+      "phone": "1-770-736-8031 x56442nu"
+    },
+    {
+      "id": 7,
+      "employee_name": "Herrod Chandler",
+      "employee_salary": 137500,
+      "employee_age": 59,
+      "profile_image": "",
+      "gender": "female"
+    },
+    {
+      "id": 8,
+      "employee_name": "Rhona Davidson",
+      "employee_salary": 327900,
+      "employee_age": 55,
+      "profile_image": "",
+      "gender": "Male",
+      "city": "badvah",
+      "phone": "781115263"
+    },
+    {
+      "id": 9,
+      "employee_name": "Colleen Hurst",
+      "employee_salary": 205500,
+      "employee_age": 39,
+      "profile_image": ""
+    },
+    {
+      "id": 10,
+      "employee_name": "Sonya Frost",
+      "employee_salary": 103600,
+      "employee_age": 23,
+      "profile_image": ""
+    },
+    {
+      "id": 12,
+      "employee_name": "Quinn Flynn",
+      "employee_salary": 342000,
+      "employee_age": 22,
+      "profile_image": ""
+    },
+    {
+      "id": 13,
+      "employee_name": "Charde Marshall",
+      "employee_salary": 470600,
+      "employee_age": 36,
+      "profile_image": ""
+    },
+    {
+      "id": 14,
+      "employee_name": "Haley Kennedy",
+      "employee_salary": 313500,
+      "employee_age": 43,
+      "profile_image": ""
+    },
+    {
+      "id": 15,
+      "employee_name": "Tatyana Fitzpatrick",
+      "employee_salary": 385750,
+      "employee_age": 19,
+      "profile_image": ""
+    },
+    {
+      "id": 16,
+      "employee_name": "Michael Silva",
+      "employee_salary": 198500,
+      "employee_age": 66,
+      "profile_image": ""
+    },
+    {
+      "id": 17,
+      "employee_name": "Paul Byrd",
+      "employee_salary": 725000,
+      "employee_age": 64,
+      "profile_image": ""
+    },
+    {
+      "id": 18,
+      "employee_name": "Gloria Little",
+      "employee_salary": 237500,
+      "employee_age": 59,
+      "profile_image": ""
+    },
+    {
+      "id": 19,
+      "employee_name": "Bradley Greer",
+      "employee_salary": 132000,
+      "employee_age": 41,
+      "profile_image": "",
+      "gender": "female"
+    },
+    {
+      "id": 20,
+      "employee_name": "Dai Rios",
+      "employee_salary": 217500,
+      "employee_age": 35,
+      "profile_image": ""
+    },
+    {
+      "id": 21,
+      "employee_name": "Jenette Caldwell",
+      "employee_salary": 345000,
+      "employee_age": 30,
+      "profile_image": ""
+    },
+    {
       "id": 22,
       "employee_name": "Yuri Berry",
       "employee_salary": 675000,
@@ -10,39 +142,93 @@
     {
       "id": 23,
       "employee_name": "Caesar Vance",
-      "employee_salary": "10645",
+      "employee_salary": 106450,
       "employee_age": 21,
       "profile_image": ""
     },
     {
       "id": 24,
-      "employee_name": "Tiger ",
-      "employee_age": "61",
-      "employee_salary": "320800"
-    },
-    {
-      "id": 25,
-      "employee_name": "vijay",
-      "employee_age": "22",
-      "employee_salary": "320800000"
-    },
-    {
-      "id": 25,
-      "employee_name": "Devendra",
-      "employee_age": "22",
-      "employee_salary": "320800000"
+      "employee_name": "Doris Wilder",
+      "employee_salary": 85600,
+      "employee_age": 23,
+      "profile_image": ""
     },
     {
       "id": 26,
-      "employee_name": "surendra pal",
-      "employee_age": "26",
-      "employee_salary": "26500"
+      "employee_name": "rupam",
+      "employee_age": "23",
+      "employee_salary": "320800",
+      "city": "badgav",
+      "email": "rupam@gmail.com",
+      "phone": "786921120000",
+      "gender": "Other"
     },
     {
       "id": 27,
+      "employee_name": "rupam",
+      "employee_age": "23",
+      "employee_salary": "320800",
+      "city": "devas",
+      "email": "rupam@gmail.com",
+      "phone": "78692112000"
+    },
+    {
+      "id": 29,
+      "employee_name": "vijay",
+      "employee_age": "52",
+      "employee_salary": "30000",
+      "city": "indore",
+      "email": "vijay88@gmail.com",
+      "phone": "749901170"
+    },
+    {
+      "id": 30,
+      "employee_name": "vij",
+      "employee_age": "52",
+      "employee_salary": "3333",
+      "city": "bomba",
+      "email": "chao@gmail.com",
+      "phone": "1111111"
+    },
+    {
+      "id": 31,
+      "employee_name": "vij",
+      "employee_age": "520",
+      "employee_salary": "3333",
+      "city": "indore",
+      "email": "chao@gmail.com",
+      "phone": "1111111",
+      "gender": "male"
+    },
+    {
+      "id": 34,
+      "employee_name": "vij",
+      "employee_age": "52",
+      "employee_salary": "3333",
+      "city": "indore",
+      "email": "chao@gmail.com",
+      "phone": "1111111",
+      "gender": "female"
+    },
+    {
+      "id": 35,
+      "employee_name": "Tiger Nixff",
+      "employee_age": "61",
+      "employee_salary": "320800",
+      "": "Indore,khargone,Bombay,pune,chennai",
+      "email": "rohitbarche99@gmail.com",
+      "phone": "7415864990",
+      "gender": "Male"
+    },
+    {
+      "id": 36,
       "employee_name": "Garrett Winters",
       "employee_age": "61",
-      "employee_salary": "170750"
+      "employee_salary": "320800",
+      "": "Indore,khargone,Bombay,pune,chennai",
+      "phone": "7415864990",
+      "email": "Sincere@april.biz",
+      "gender": "Male"
     }
   ]
 }

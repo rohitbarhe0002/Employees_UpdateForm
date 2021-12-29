@@ -1,10 +1,14 @@
 import { UPDATE_EMP }from "../action";
 const initialState = {
     employee:{
-        id:'',
+       id:'',
        employee_name:'',
        employee_age:'',
        employee_salary:'',
+       city:'',
+       email:'',
+       phone:'',
+       gender:'',
     },
 }
 

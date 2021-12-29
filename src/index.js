@@ -5,13 +5,16 @@ import { Provider } from 'react-redux';
 import store from './store';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
+import UpdateEmp from './components/UpdateEmp';
+import AntdForm, {FormLayoutDemo}  from './components/AntdForm'
 
 
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-    <App />
+      <App/>
+
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
@@ -21,3 +24,5 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+  
