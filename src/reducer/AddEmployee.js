@@ -9,6 +9,7 @@ const initialState = {
        email:'',
        phone:'',
        gender:'',
+       birth:'',
     },
 }
 

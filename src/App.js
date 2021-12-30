@@ -5,14 +5,15 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 import EmpData from './components/EmpData';
 import UpdateEmp from './components/UpdateEmp';
 import AddEmployee from './components/AddEmployee';
+import EmpoloyeeLogin from './components/EmpoloyeeLogin';
 
 function App() {
   return (
     <div>
       <>
         <Router>
-
-          <Route exact path="/" component={EmpData} />
+          <Route exact path="/" component={EmpoloyeeLogin} />
+          <Route exact path="/EmpData" component={EmpData} />
           <Route path="/UpdateEmp/:Id" component={UpdateEmp} />
           <Route path="/AddEmployee" component={AddEmployee} />
         </Router>

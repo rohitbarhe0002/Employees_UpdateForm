@@ -1,22 +1,12 @@
 {
   "data": [
     {
-      "id": 4,
-      "employee_name": "Cedric Kelly",
-      "employee_salary": 433060,
-      "employee_age": 22,
-      "profile_image": "",
-      "phone": "7415864990",
-      "city": "bomba",
-      "email": "Sincere@april.biz",
-      "gender": "Female"
-    },
-    {
       "id": 5,
       "employee_name": "Airi Satou",
       "employee_salary": 162700,
       "employee_age": 33,
-      "profile_image": ""
+      "profile_image": "",
+      "city": "gudga"
     },
     {
       "id": 6,
@@ -35,7 +25,10 @@
       "employee_salary": 137500,
       "employee_age": 59,
       "profile_image": "",
-      "gender": "female"
+      "gender": "female",
+      "city": "manavr",
+      "email": "rohitbarche99@gmail.com",
+      "phone": "7415864990"
     },
     {
       "id": 8,
@@ -229,6 +222,33 @@
       "phone": "7415864990",
       "email": "Sincere@april.biz",
       "gender": "Male"
+    },
+    {
+      "id": 37,
+      "employee_name": "rohit",
+      "employee_age": "85",
+      "employee_salary": "780",
+      "city": "badvah",
+      "email": "rohitbarche99@gmail.com",
+      "phone": "7415864990"
+    },
+    {
+      "id": 38,
+      "employee_name": "rohitbarche1",
+      "employee_age": "78",
+      "employee_salary": "963",
+      "city": "indore",
+      "email": "rohitbarche99@gmail.com",
+      "phone": "7415864990"
+    },
+    {
+      "id": 39,
+      "employee_name": "vinod barche ",
+      "employee_age": "54",
+      "employee_salary": "520000",
+      "city": "karahi",
+      "email": "rohitbarche9@gmail.com",
+      "phone": "889611526"
     }
   ]
 }
