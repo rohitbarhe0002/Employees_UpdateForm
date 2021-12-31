@@ -6,7 +6,8 @@
       "employee_salary": 162700,
       "employee_age": 33,
       "profile_image": "",
-      "city": "gudga"
+      "city": "gudga",
+      "password": "123456"
     },
     {
       "id": 6,
@@ -163,7 +164,8 @@
       "employee_salary": "320800",
       "city": "devas",
       "email": "rupam@gmail.com",
-      "phone": "78692112000"
+      "phone": "78692112000",
+      "password": "6789"
     },
     {
       "id": 29,

@@ -17,6 +17,7 @@ import { Modal } from 'antd';
 import { requestForEmpGet, requestForEmpPost, requestForEmpPut } from '../thunk/request';
 import { UpdateEmployee } from '../action';
 import { useHistory } from 'react-router';
+import Password from 'antd/lib/input/Password';
 
 
 export default function AddEmployee() {
@@ -27,7 +28,7 @@ export default function AddEmployee() {
     const [cityData, setCountryData] = useState(['Indore','khargone','Bombay','pune','chennai']);
     console.log(cityData);
     const dispatch = useDispatch()
-    const{id,employee_name,employee_salary,employee_age,city,email,phone,gender,birth} = employee;
+    const{id,employee_name,employee_salary,employee_age,city,email,phone,gender,empId} = employee;
     const ciities =['khargone','indore','banaras','bombay']
 
 
@@ -111,6 +112,7 @@ export default function AddEmployee() {
       <Form.Item
         label="name"
         name="employee_name"
+        hasFeedback
         rules={[
           {
             required: true,
@@ -127,6 +129,7 @@ export default function AddEmployee() {
       <Form.Item
         label="Age"
         name="employee_age"
+        hasFeedback
         rules={[
           {
             required: true,
@@ -141,8 +144,27 @@ export default function AddEmployee() {
       </Form.Item>
 
       <Form.Item
+        label="Emp_Id"
+        name="Emp_Id"    
+        hasFeedback
+        rules={[
+          {
+            required: true,
+            message: 'Please input your password!',
+            whitespace:false
+          },
+        ]}
+     
+      >
+        <Input    name="password"
+        value={empId}
+        onChange={InputChange} />
+      </Form.Item>
+
+      <Form.Item
         label="Salary"
         name="employee_salary"
+        hasFeedback
         rules={[
           {
             required: true,
@@ -156,32 +178,16 @@ export default function AddEmployee() {
         onChange={InputChange} />
       </Form.Item>
 
-            <Form.Item
-
-            
-              label="city"
-              name="city"
-              rules={[
-                {
-                  required: true,
-                  message: 'Please input your city!',
-                },
-              ]}
-              
-                  
-        >
-       
-          <Input   name="city"
-          value={city}
-          onChange={InputChange} />
-        </Form.Item>
+     
       <Form.Item
         label="Email"
         name="email"
+        hasFeedback
         rules={[
           {
             required: true,
             message: 'Please input your Email!',
+            whitespace:false,
           },
         ]}
      
@@ -194,10 +200,12 @@ export default function AddEmployee() {
       <Form.Item
         label="phone"
         name="phone"    
+        hasFeedback
         rules={[
           {
             required: true,
             message: 'Please input your phone!',
+            whitespace:false
           },
         ]}
      
@@ -212,7 +220,7 @@ export default function AddEmployee() {
 
 
       <Form.Item
-      
+      hasFeedback
         label="Gender"
         rules={[
           {
@@ -227,7 +235,21 @@ export default function AddEmployee() {
           <Option value="other">Other</Option>
         </Select>
       </Form.Item>
+      <Form.Item
 
+            
+label="city"
+name="city"
+hasFeedback
+rules={[
+  {
+    required: true,
+    message: 'Please input your city!',
+  },
+]}
+
+    
+>
  <Select   placeholder="select city"
  style={{width:'50%'}}
  >
@@ -237,7 +259,9 @@ export default function AddEmployee() {
      })
    }
 
- </Select><br/>
+ </Select>
+ </Form.Item>
+ <br/>
 <br/>
  <Form.Item  className='center'>
       <Button  type="primary" htmlType='submit' onClick={onSubmit}>submit</Button>

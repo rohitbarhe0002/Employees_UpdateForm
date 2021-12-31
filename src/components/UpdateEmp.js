@@ -22,7 +22,7 @@ export default function UpdateEmp() {
     const employee = useSelector((state) => state.updateEmployees.employee)
     const dispatch = useDispatch()
 
-    const{id,employee_name,employee_salary,employee_age,city,email,phone,gender} = employee;
+    const{id,employee_name,employee_salary,employee_age,city,email,phone,gender,password} = employee;
 
    
 
@@ -38,7 +38,7 @@ export default function UpdateEmp() {
     };
   
     const handleCancel = () => {
-      history.push('/')
+      history.push('/EmpData')
       setIsModalVisible(false);
     };
 
@@ -65,7 +65,7 @@ export default function UpdateEmp() {
    console.log("hiiiiii");
    event.preventDefault();
    dispatch(requestForEmpPut(Id,employee))
-   history.push('/')
+   history.push('/EmpData')
  }
     console.log(employee);
 
@@ -93,7 +93,7 @@ export default function UpdateEmp() {
       
       <Form.Item
         label="name"
-       
+       hasFeedback
         rules={[
           {
             required: true,
@@ -108,8 +108,24 @@ export default function UpdateEmp() {
       </Form.Item>
 
       <Form.Item
+        label="password"
+       hasFeedback
+        rules={[
+          {
+            required: true,
+            message: 'Please input your username!',
+          },
+        ]}
+     
+      >
+        <Input  name="password"
+        value={password}
+        onChange={InputChange}/>
+      </Form.Item>
+
+      <Form.Item
         label="Age"
-       
+       hasFeedback
         rules={[
           {
             required: true,
@@ -125,7 +141,7 @@ export default function UpdateEmp() {
 
       <Form.Item
         label="Salary"
-       
+       hasFeedback
         rules={[
           {
             required: true,
@@ -141,7 +157,7 @@ export default function UpdateEmp() {
 
       <Form.Item
         label="city"
-      
+      hasFeedback
         rules={[
           {
             required: true,
@@ -172,7 +188,7 @@ export default function UpdateEmp() {
 
       <Form.Item
         label="phone"
-     
+     hasFeedback
         rules={[
           {
             required: true,

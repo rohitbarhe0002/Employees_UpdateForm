@@ -37,7 +37,7 @@ export default function EmpData() {
       email: item.email,
        phone: item.phone,
       id: item.id,
-      dob:item.birth,
+     password:item.password,
     })
   )
   )
@@ -50,8 +50,16 @@ export default function EmpData() {
 
     },
     {
+      title: 'Password',
+      dataIndex: 'password',
+
+
+    },
+    {
       title: 'EmployeeAge',
       dataIndex: 'employee_age',
+     
+      sorter: (a, b) => a.employee_age - b.employee_age,
 
 
     },
@@ -107,18 +115,9 @@ export default function EmpData() {
 
       <h2 className='container' ><span className='board'>Emloyees Board</span></h2>
 
-      <Navbar bg="warning" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="/AddEmployee">Add</Nav.Link>
-          </Nav>
-          <h4 >
+      <h4 >
             <Badge bg="success">{length}</Badge>
           </h4>
-        </Container>
-      </Navbar>
-
       <Table className="table-striped-rows"
       dataSource={data}
         pagination={{ pageSize: 10 }}
