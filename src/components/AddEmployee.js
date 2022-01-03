@@ -144,20 +144,21 @@ export default function AddEmployee() {
       </Form.Item>
 
       <Form.Item
-        label="Emp_Id"
-        name="Emp_Id"    
+        label="id"
+        name="id"    
         hasFeedback
         rules={[
           {
             required: true,
-            message: 'Please input your password!',
+            message: 'Please input your Id!',
             whitespace:false
           },
         ]}
      
       >
-        <Input    name="password"
-        value={empId}
+        <Input   
+         name="id"
+        value={id}
         onChange={InputChange} />
       </Form.Item>
 

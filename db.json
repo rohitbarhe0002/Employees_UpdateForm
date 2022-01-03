@@ -251,6 +251,41 @@
       "city": "karahi",
       "email": "rohitbarche9@gmail.com",
       "phone": "889611526"
+    },
+    {
+      "id": 40,
+      "employee_name": "rohi",
+      "employee_age": "23",
+      "employee_salary": "260",
+      "password": "3001",
+      "email": "rohitbarche99@gmail.com",
+      "phone": "7415864990"
+    },
+    {
+      "id": 41,
+      "employee_name": "bharat",
+      "employee_age": "25",
+      "employee_salary": "9600",
+      "Emp_Id": "tytu",
+      "email": "rohitbarche99@gmail.com",
+      "phone": "9165531730"
+    },
+    {
+      "id": 42,
+      "employee_name": "MADHURYA",
+      "employee_age": "21",
+      "employee_salary": "2600",
+      "Emp_Id": "301",
+      "email": "ROHITBARCHE99@00",
+      "phone": "74158649900"
+    },
+    {
+      "id": "3001",
+      "employee_name": "vidhi",
+      "employee_age": "19",
+      "employee_salary": "250",
+      "email": "vidhi@gmail.com",
+      "phone": "7415864990"
     }
   ]
 }

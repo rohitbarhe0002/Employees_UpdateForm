@@ -35,9 +35,9 @@ export default function EmpData() {
       employee_salary: item.employee_salary,
       city: item.city,
       email: item.email,
-       phone: item.phone,
+      phone: item.phone,
       id: item.id,
-     password:item.password,
+    
     })
   )
   )
@@ -50,8 +50,8 @@ export default function EmpData() {
 
     },
     {
-      title: 'Password',
-      dataIndex: 'password',
+      title: 'employee_id',
+      dataIndex: 'id',
 
 
     },

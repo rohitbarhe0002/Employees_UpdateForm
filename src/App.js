@@ -13,11 +13,12 @@ function App() {
       <>
         <Router>
           <Route exact path="/" component={EmpoloyeeLogin} />
-          <Route exact path="/EmpData" component={EmpData} />
+          <Route  path="/EmpData" component={EmpData} />
           <Route path="/UpdateEmp/:Id" component={UpdateEmp} />
           <Route path="/AddEmployee" component={AddEmployee} />
         </Router>
       </>
+    
     </div>
   );
 }
