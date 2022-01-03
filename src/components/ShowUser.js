@@ -51,6 +51,7 @@ export const ShowUser=(props)=> {
 
          console.log("vijay",props.user);
      console.log("vi",props.user.employee_name);
+
      const {employee_name,employee_age,employee_salary,email,city,phone,gender} = props.user
     return (
        
@@ -71,17 +72,24 @@ export const ShowUser=(props)=> {
           <tbody>
 
               <>
-                <tr >
+             
+                {props.user.map((item)=>(
+                  <>
+                     <tr >
+  <td className="table-danger">{item.employee_name}</td>
+  <td className="table-danger">{item.employee_age}</td>
+  <td className="table-danger">{item.employee_salary}</td>
+  <td className="table-danger">{item.email}</td>
+  <td className="table-danger">{item.phone}</td>
+  <td className="table-danger">{item.city}</td>
+  <td className="table-danger">{item.gender}</td>
+  </tr> 
+  </>
+                ))}
                   
-                  <th className="table-danger">{employee_name}</th>
-                  <th className="table-danger">{employee_age}</th>
-                  <th className="table-danger">{employee_salary}</th>
-                  <th className="table-danger">{email}</th>
-                  <th className="table-danger">{phone}</th>
-                  <th className="table-danger">{city}</th>
-                  <th className="table-danger">{gender}</th>
+                
                   
-                </tr> 
+              
                </>
           </tbody>
         </Table> 

@@ -19,7 +19,7 @@ export default function EmpoloyeeLogin() {
   const [state, setState] = useState({
 
     username: '',
-    id: [],
+    id: '',
 
   })
 
