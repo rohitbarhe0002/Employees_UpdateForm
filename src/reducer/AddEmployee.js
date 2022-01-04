@@ -10,6 +10,7 @@ const initialState = {
        phone:'',
        gender:'',
        empId:'',
+       date:'',
     },
 }
 

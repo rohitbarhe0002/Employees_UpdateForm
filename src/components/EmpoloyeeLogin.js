@@ -6,13 +6,24 @@ import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Password from 'antd/lib/input/Password';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { ShowUser } from './ShowUser';
+import { showform } from '../action';
 
 export default function EmpoloyeeLogin() {
 
+
+
+  const myStyle={
+    backgroundImage:"url(" +
+"https://i.pinimg.com/474x/62/69/be/6269be179ab7d610b2a4959387fd77af.jpg"+")",
+    width:'100%',
+    height:'900px',
+    };
+    const dispatch = useDispatch()
   const employees = useSelector((state) => state.getEmployees.emp)
+  const show = useSelector((state) => state.ShowForm.show)
 
   console.log("eeee", employees);
 
@@ -41,39 +52,32 @@ export default function EmpoloyeeLogin() {
   console.log('yhhhh', state);
 
   const onSubmit = async () => {
-    if(id=='3002'){
-      await axios.get(`http://localhost:3008/data`).then((response)=>{
-      console.log("raj",response.data);
-      setuser(response.data);
+dispatch(showform(!show))
 
-    })
+   if(id =='3002')
+    {
+
+ history.push('/EmpData')
   }
-  
-    else{
 
+  else{
     await axios.get(`http://localhost:3008/data/${id}`).then((response)=>{
-      console.log("raj",response.data);
-      setuser(response.data);
-    })
-  }
+    console.log("raj",response.data);
+    setuser(response.data);
+
+  })
+}
+
 }
 
 
 
   return (
     <>
-      <div>
+      <div  style={myStyle}>
+ 
 
-        <Navbar bg="secondary" variant="dark">
-          <Container>
-            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-            <Nav className="me-auto">
-              <Nav.Link href="/AddEmployee">Add</Nav.Link>
-              <Nav.Link href="/EmpData">Employee Board</Nav.Link>
-            </Nav>
-
-          </Container>
-        </Navbar>
+      <h1 style={{ color: 'skyblue', textAlign : 'center'} }>Welocome <span style={{ color: 'grey', textAlign : 'center' } } >Emoloyee</span></h1>
 
         <Form
 

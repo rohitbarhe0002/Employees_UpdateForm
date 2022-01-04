@@ -28,7 +28,7 @@ export default function AddEmployee() {
     const [cityData, setCountryData] = useState(['Indore','khargone','Bombay','pune','chennai']);
     console.log(cityData);
     const dispatch = useDispatch()
-    const{id,employee_name,employee_salary,employee_age,city,email,phone,gender,empId} = employee;
+    const{id,employee_name,employee_salary,employee_age,city,email,phone,gender,empId,date} = employee;
     const ciities =['khargone','indore','banaras','bombay']
 
 
@@ -45,13 +45,13 @@ export default function AddEmployee() {
     };
   
     const handleCancel = () => {
-      history.push('/')
+      history.push('/EmpData')
       setIsModalVisible(false);
     };
 
     const [show, setShow] = useState(true);
     const handleClose = () => {
-      history.push('/')
+      history.push('/EmpData')
     setShow(false);
     }
     const InputChange = (event) =>{
@@ -80,7 +80,7 @@ export default function AddEmployee() {
   //   }
   //   else{
     dispatch(requestForEmpPost(employee))
-    history.push('/')
+    history.push('/EmpData')
     }
   
     
@@ -216,7 +216,26 @@ export default function AddEmployee() {
         onChange={InputChange} />
       </Form.Item>
 
+      <Form.Item
+        label="date"
+        name="date"    
+        hasFeedback
+        rules={[
+          {
+            required: true,
+            message: 'Please input your date!',
+            whitespace:false
+          },
+        ]}
      
+        
+      >
+     <DatePicker  />
+       
+      </Form.Item>
+      <Input    name="date"
+        value={date}
+        onChange={InputChange} />
 
 
 
@@ -235,6 +254,12 @@ export default function AddEmployee() {
           <Option value="female">Female</Option>
           <Option value="other">Other</Option>
         </Select>
+
+        <Select onSelect={(value, event) => InputChange(value, event)}>
+
+<Option value="1">text 1</Option>
+<Option value="2">text 2</Option>
+</Select>
       </Form.Item>
       <Form.Item
 

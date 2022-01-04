@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { getemp } from '../action'
 import { requestForemp, requestForEmpdelete } from '../thunk/request'
 import { useDispatch, useSelector } from 'react-redux'
@@ -11,10 +11,16 @@ import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
 import Alert from 'react-bootstrap/Alert'
-import { WindowsFilled } from '@ant-design/icons/lib/icons'
+import Form from 'react-bootstrap/Form'
+import FormControl from 'react-bootstrap/FormControl'
+import "antd/dist/antd.css"
+import {SearchOutlined} from '@ant-design/icons';
+
+
+import { BehanceSquareOutlined, SecurityScanFilled, SlackSquareFilled, WindowsFilled } from '@ant-design/icons/lib/icons'
 import 'antd/dist/antd.css';
 
-import { Table } from 'antd'
+import { Input, Table } from 'antd'
 
 
 export default function EmpData() {
@@ -23,6 +29,7 @@ export default function EmpData() {
 
   const dispatch = useDispatch()
   const employees = useSelector((state) => state.getEmployees.emp)
+  const [search, setsearch] = useState('')
   const length = employees.length;
   console.log("Employee", employees);
 
@@ -37,6 +44,7 @@ export default function EmpData() {
       email: item.email,
       phone: item.phone,
       id: item.id,
+      date:item.date
     
     })
   )
@@ -47,7 +55,29 @@ export default function EmpData() {
     {
       title: 'EmployeeName',
       dataIndex: 'employee_name',
-
+      filterDropdown: ({setSelectedKeys,selectedKeys,confirm}) => {
+        return <Input autoFocus placeholder='type text here' 
+        value={selectedKeys [0]}
+        onChange={(e)=>{
+         
+          setSelectedKeys (e.target.value?[e.target.value]:[])
+        }}
+        onPressEnter={() => {
+          confirm()
+        }} 
+        onBlur={() => {
+          confirm()
+        }}></Input>;
+         
+      },
+      filterIcon: () =>{
+        return <SearchOutlined/>
+      },
+      onFilter:(value,employees)=>{
+        return employees.employee_name.toLowerCase().includes(value.toLowerCase())
+      }
+      
+  
     },
     {
       title: 'employee_id',
@@ -83,6 +113,11 @@ export default function EmpData() {
       dataIndex: 'phone',
 
     },
+    {
+      title: 'Date',
+      dataIndex: 'date',
+
+    },
  
     {
       title: 'Action',
@@ -115,52 +150,45 @@ export default function EmpData() {
 
       <h2 className='container' ><span className='board'>Emloyees Board</span></h2>
 
-      <h4 >
+    
+          <Navbar bg="secondary" variant="dark">
+          <Container>
+          <SecurityScanFilled  style={{ color: '#92D7B8   ',fontSize:55 } }/>
+        
+          {"             "}
+            <Nav className="me-auto">
+
+              <Nav.Link href="/AddEmployee">Add</Nav.Link>
+              <Nav.Link href="/EmpData">Employee Board</Nav.Link>
+              
+            </Nav>
+            <h4 >
             <Badge bg="success">{length}</Badge>
-          </h4>
+          </h4>{"             "} {"             "}
+          
+          <Form className="d-flex">
+        <FormControl
+          type="search"
+          placeholder="Search"
+          className="me-2"
+          aria-label="Search"
+          onChange={(event)=>{
+            setsearch(event.target.value)
+          }}
+        />
+        <Button variant="outline-success">Search</Button>
+      </Form>
+          </Container>
+        </Navbar>
       <Table className="table-striped-rows"
       dataSource={data}
         pagination={{ pageSize: 10 }}
         columns={columns}
         
-      ></Table>
-      {/* <Table  className='Table' bg="dark" >
-       
-        <thead className="thead-dark">
-          <tr>
-          
-            <th>Employee name</th>
-            <th>Employee age</th>
-            <th>Employee salary</th>
-            <th>City</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>gender</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
+      >
+        </Table>
+        </>
 
-
-        <tbody>
-            {employees.map((item)=>(
-                <tr>
-                    
-                    <td>{item.employee_name}</td>
-                    <td>{item.employee_age}</td>
-                    <td>{item.employee_salary}</td>
-                    <td>{item.city}</td>
-                    <td>{item.email}</td>
-                    <td>{item.phone}</td>
-                    <td>{item.gender}</td>
-                   
-                  <Button> <Link className="btn btn-secondary" varient="danger" to={`/UpdateEmp/${item.id}`}>Update</Link></Button> 
-                  <Button className='warning'> <Button varient="secondary"onClick={()=>handledlete(item.id)}>Delete</Button></Button>
-                </tr>
-            ))}
-        
-         
-        </tbody>
-      </Table>  */}
-    </>
   )
 }
+
